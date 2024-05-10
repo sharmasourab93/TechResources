@@ -1,0 +1,690 @@
+
+<!-- saved from url=(0103)http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/default.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   
+   <meta name="GENERATOR" content="Mozilla/4.02 [en] (X11; I; SunOS 5.5.1 sun4u) [Netscape]">
+   <title>6.891 Machine Learning Approaches for Natural Language Processing, Fall 2003</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#A06000" alink="#FF0000">
+
+<center><h2><font color="DF0000"> <b>6.891 (Fall 2003):
+Machine Learning Approaches for Natural Language Processing
+</b> <br></font></h2>
+</center>
+
+<p>
+<b>Instructor:</b> Michael Collins (<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/people/mcollins">home</a>)
+
+</p><p>
+<b>Class times:</b> Monday, Wednesday 4-5.30, Room 1-379.
+
+</p><p>
+<b>Office hours:</b> Thursdays 10.30-12, Room NE43-723.
+If you'd like
+to meet with me at other times, please send me email at
+<tt>mcollins at ai dot mit dot edu</tt>.
+
+</p><li>
+<a href="http://www.eecs.mit.edu/AY03-04/fall-cat/6891.html">
+Course description
+
+</a>
+
+
+
+</li><li> 
+General information (grading policy etc.)
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/general.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/general.pdf">.pdf</a>.
+
+
+
+<hr width="100%">
+
+
+<h3><font color="#00DF00">New Announcements (November 5th, 2003)</font></h3>
+
+<p>
+</p></li><li> The instructions for Assignment II (the final project) are now posted <a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/project.html">here</a>. Please read the instructions carefully!
+The project is due by <b>Wednesday, December 10th</b>.
+
+<hr width="100%">
+
+<h3><font color="#00DF00">Lecture Slides</font></h3>
+
+<table>
+<tbody><tr><td><b><font color="#FF0000">Lecture 1 (9/3/03): </font> </b></td><td><b>Introduction</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l1.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l1.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 2 (9/8/03): </font></b></td>
+<td><b>Language Modeling, and Smoothed estimation</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l2.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l2.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 3 (9/10/03): </font></b></td>
+<td><b>Stochastic Parsing I</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l3.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l3.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 4 (9/15/03): </font></b></td>
+<td><b>Stochastic Parsing II</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l4.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l4.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 5 (9/17/03): </font></b></td>
+<td><b>Stochastic Parsing III</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l5.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l5.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 6 (9/24/03): </font></b></td>
+<td><b>Log-Linear Models</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l6.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l6.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 7 (9/29/03): </font></b></td>
+<td><b>Tagging</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l7.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l7.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 8 (10/1/03): </font></b></td>
+<td><b>Log-Linear Models for Parsing, and the EM Algorithm Part I</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l8.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l8.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 9 (10/6/03): </font></b></td>
+<td><b>The EM Algorithm, Part II</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l9.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l9.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 10 (10/8/03): </font></b></td>
+<td><b>Machine Translation, Part I</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l10.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l10.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 11 (10/15/03): </font></b></td>
+<td><b>Machine Translation, Part II</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l11.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l11.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 12 (10/20/03): </font></b></td>
+<td><b>Machine Translation, Part III</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l12.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l12.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 13 (10/22/03): </font></b></td>
+<td><b>Machine Translation, Part IV</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l13.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l13.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 14 (10/27/03): </font></b></td>
+<td><b>Global Linear Models, Part I</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l14.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l14.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 15 (10/29/03): </font></b></td>
+<td><b>Global Linear Models, Part II</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l15.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l15.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 16 (11/3/03): </font></b></td>
+<td><b>Global Linear Models, Part III</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l16.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l16.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 17 (11/5/03): </font></b></td>
+<td><b>Theories of Generalization</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l17.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l17.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 18 (11/12/03): </font></b></td>
+<td><b>Word Sense Disambiguation</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l18.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l18.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 19 (11/17/03): </font></b></td>
+<td><b>Guest Lecture (Regina Barzilay)</b>
+</td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 20 (11/19/03): </font></b></td>
+<td><b>Information Extraction, and Partially Supervised Approaches</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l20.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l20.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 21 (11/24/03): </font></b></td>
+<td><b>Relation Extraction</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l21.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l21.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 22 (12/1/03): </font></b></td>
+<td><b>Dialogue Systems</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l22.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l22.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 23 (12/3/03): </font></b></td>
+<td><b>Optimality Theory</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l23.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l23.pdf">.pdf</a></td></tr>
+
+<tr><td><b><font color="#FF0000">Lecture 24 (12/8/03): </font></b></td>
+<td><b>Kernel Methods</b>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l24.ps">.ps</a>,<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l24.pdf">.pdf</a></td></tr>
+
+</tbody></table>
+
+<hr width="100%">
+
+<h3><font color="#00DF00">Lecture Slides + Lecture Readings:</font></h3>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 1 (3rd September, 2003)</font>: Introduction</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l1.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l1.pdf">.pdf</a>.
+
+
+</li>
+
+<li> 
+Syllabus
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/s.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/s.pdf">.pdf</a>.
+
+
+</li>
+
+<li> 
+Questionnaire
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/q.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/q.pdf">.pdf</a>.
+
+
+</li>
+
+<hr width="100%">
+
+
+<h4>
+<font color="#FF0000">
+Lecture 2 (8th September, 2003)</font>:
+<b>Language Modeling, and Smoothed estimation</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l2.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l2.pdf">.pdf</a>.
+
+
+</li><li> 
+Further readings:
+
+<ul>
+
+<li>
+<a href="http://www-2.cs.cmu.edu/~sfc/papers/h015a-techreport.ps.gz">
+An Empirical Study of Smoothing Techniques for Language Modeling.</a>
+Stanley Chen and Joshua Goodman. 1998. Harvard Computer Science
+Technical report TR-10-98.
+</li>
+
+<li>
+<a href="http://www.autoreason.com/COLT00c.ps">
+On the Convergence Rate of Good-Turing Estimators.</a>
+David McAllester and Robert E. Schapire.
+In Proceedings of COLT 2000.
+</li>
+
+</ul>
+
+<hr width="100%">
+
+
+
+</li>
+
+<h4>
+<font color="#FF0000">
+Lecture 3 (10th September, 2003)</font>:
+<b>Stochastic Parsing I</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l3.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l3.pdf">.pdf</a>.
+
+
+<hr width="100%">
+
+
+<h4>
+<font color="#FF0000">
+Lecture 4 (15th September, 2003)</font>:
+<b>Stochastic Parsing II</b>
+</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l4.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l4.pdf">.pdf</a>.
+
+
+</li><li> 
+Two readings for the lecture:
+
+<ul>
+
+<li>
+<a href="http://www.cs.brown.edu/people/ec/papers/aaai97.ps">
+Statistical parsing with a context-free grammar and word
+statistics.</a>
+Eugene Charniak. 1997.Proceedings of the Fourteenth National Conference on
+Artificial Intelligence AAAI Press/MIT Press, Menlo Park (1997).
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/aaai97.pdf">pdf version.</a>
+
+</li><li>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/people/mcollins/papers/paper14.short.ps">
+Three Generative, Lexicalised Models for Statistical Parsing</a>.
+Michael Collins. 1997.
+In proceedings of ACL 1997.
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/paper14.short.pdf">pdf version.</a>
+
+</li>
+
+</ul>
+
+<hr width="100%">
+
+
+<h4>
+<font color="#FF0000">
+Lecture 5 (17th September, 2003)</font>:
+<b>Stochastic Parsing III</b>
+</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l5.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l5.pdf">.pdf</a>.
+
+
+<hr width="100%">
+
+
+<h4>
+<font color="#FF0000">
+Lecture 6 (24th September, 2003)</font>:
+<b>Log-Linear Models</b>
+</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l6.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l6.pdf">.pdf</a>.
+
+
+</li><li> 
+There is one reading for the lecture:
+
+
+<ul>
+
+<li>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/J1996-1002.pdf">
+A maximum entropy approach to natural language processing
+</a>.
+Adam Berger, Stephen Della Pietra, and Vincent Della Pietra.
+Computational Linguistics, (22-1), March 1996.
+</li>
+
+<li>A couple of notes about the reading: there appears to be
+an error in section 3.4, the derivation of the primal/dual
+relationship (there's a sign flipped in equation 11). So
+don't worry too much about this derivation -- we'll go
+through some of it in class. Also, the paper emphasizes
+the "maximum entropy" property of these models, whereas
+I'll emphasize the parametric/maximum-likelihood interpretation
+(section 3.5) in class.
+
+</li>
+
+</ul>
+
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 7 (29th September, 2003)</font>:
+<b>Tagging</b>
+</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l7.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l7.pdf">.pdf</a>.
+
+</li><li> 
+Two readings for the lecture:
+
+<ul>
+
+<li>
+Please read chapter 5 of
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/READINGS/adwait.ps">
+Maximum entropy models for natural language ambiguity resolution</a>.
+Adwait Ratnaparkhi. 1998. PhD thesis, University of Pennsylvania.
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/READINGS/adwait.pdf">pdf version.</a>
+
+</li><li>
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/READINGS/maxent.pdf">
+Maximum Entropy Markov Models for Information Extraction and
+Segmentation</a>.  Andrew Mccallum, Dayne Freitag, Fernando
+Pereira. 2000.  Machine Learning: Proceedings of the Seventeenth
+International Conference (ICML 2000)
+
+</li>
+
+</ul>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 8 (1st October, 2003)</font>:
+<b>Log-Linear Models for Parsing, 
+and the EM Algorithm Part I</b>
+</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l8.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l8.pdf">.pdf</a>.
+
+
+</li><li> 
+Notes on Lagrange multipliers (thanks to Ali Mohammad for
+putting these together):
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/lagrange.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/lagrange.pdf">.pdf</a>.
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 9 (6th October, 2003)</font>:The EM Algorithm, Part II
+</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l9.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l9.pdf">.pdf</a>.
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 10 (8th October, 2003)</font>:
+<b>Machine Translation, Part I</b>
+</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l10.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l10.pdf">.pdf</a>.
+
+</li><li> 
+There are two readings for the lecture. <b>Please note:</b> I've
+given both pdf and ps versions of each paper, but the .ps
+versions may be better (the conversion from postscript to pdf
+is not always perfect). If you can't view postscript files, you
+may want to download a copy of ghostview (try a search for
+ghostview on google).
+
+<ul>
+
+<li>
+<a href="ftp://ftp.umiacs.umd.edu/pub/bonnie/jordan/newai98.pdf">
+A survey of current paradigms in machine translation</a>.
+Bonnie Dorr, Pamela Jordan, and John Benoit.
+Advances in Computers, Vol 49, M. Zelkowitz (Ed), Academic Press, London, pp. 1--68, 1999.
+<a href="ftp://ftp.umiacs.umd.edu/pub/bonnie/jordan/newai98.ps">
+.ps version</a>
+
+</li><li>
+
+
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/READINGS/aimag97.pdf">
+Automating Knowledge Acquisition for Machine Translation.</a>
+Kevin Knight.
+AI Magazine 18(4), 1997.
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/READINGS/aimag97.ps">ps version.</a>
+<b>I thought this was a fun article! If you can, try following
+the Centauri/Arcturan translation example with some care as
+you read the text!</b>
+
+
+
+</li>
+
+</ul>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 11 (15th October, 2003)</font>:
+<b>Machine Translation, Part II</b>
+</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l11.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l11.pdf">.pdf</a>.
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 12 (20th October, 2003)</font>:
+<b>Machine Translation, Part III</b>
+</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l12.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l12.pdf">.pdf</a>.
+
+</li>
+
+
+<li> 
+A reading for the lecture:
+
+<ul>
+
+<li>
+<a href="http://www.isi.edu/natural-language/projects/rewrite/decoder.pdf">
+Fast Decoding and Optimal Decoding for Machine Translation.</a>
+U. Germann, M. Jahr, K. Knight, D. Marcu, and K. Yamada. 
+Proc. of the Conference of the Association for Computational Linguistics (ACL), 2001. Best Paper award. 
+
+</li>
+
+</ul>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 13 (22nd October, 2003)</font>:
+<b>Machine Translation, Part IV</b>
+</h4>
+
+</li><li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l13.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l13.pdf">.pdf</a>.
+
+</li>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 14 (27th October, 2003)</font>:
+<b>Global Linear Models, Part I</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l14.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l14.pdf">.pdf</a>.
+
+</li>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 15 (29th October, 2003)</font>:
+<b>Global Linear Models, Part II</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l15.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l15.pdf">.pdf</a>.
+
+</li>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 16 (3rd November, 2003)</font>:
+<b>Global Linear Models, Part III</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l16.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l16.pdf">.pdf</a>.
+
+</li>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 17 (5th November, 2003)</font>:
+<b>Theories of Generalization
+</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l17.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l17.pdf">.pdf</a>.
+
+</li>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 18 (12th November, 2003)</font>:
+<b>Word Sense Disambiguation
+</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l18.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l18.pdf">.pdf</a>.
+
+</li>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 19 (17th November, 2003)</font>:
+<b>Guest Lecture (Regina Barzilay)
+</b>
+
+
+<hr width="100%">
+
+</h4><h4>
+<font color="#FF0000">
+Lecture 20 (19th November, 2003)</font>:
+<b>Information Extraction, and Partially Supervised Approaches
+</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l20.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l20.pdf">.pdf</a>.
+
+</li>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 21 (24th November, 2003)</font>:
+<b>Relation Extraction
+</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l21.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l21.pdf">.pdf</a>.
+
+</li>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 22 (1st December, 2003)</font>:
+<b>Dialogue Systems
+</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l22.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l22.pdf">.pdf</a>.
+
+</li>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 23 (3rd December, 2003)</font>:
+<b>Optimality Theory
+</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l23.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l23.pdf">.pdf</a>.
+
+</li>
+
+<hr width="100%">
+
+<h4>
+<font color="#FF0000">
+Lecture 24 (8th December, 2003)</font>:
+<b>Kernel Methods
+</b>
+</h4>
+
+<li> 
+Slides
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l24.ps">.ps</a>,
+<a href="http://vidya01/vidya/digiLib8/digilib7/2k6/jan/TUTORIALS/NLP/MIT/mit-nlp/courses/6.891-nlp/l24.pdf">.pdf</a>.
+
+</li>
+
+
+
+
+
+
+
+
+
+
+</body></html>
